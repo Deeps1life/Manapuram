@@ -22,7 +22,7 @@ public class Baseclass {
 	
 	@BeforeClass
 	public void openBrowser() throws IOException {
-		driver=new EdgeDriver();
+		driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		String url = f.readDataFromProperty("url");
