@@ -18,16 +18,16 @@ public class FileLib {
 		return data;
 	}
 	public String readDataFromExcel(String sheet,int row,int cell) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./data/testscript.xlsx");
+		FileInputStream fis=new FileInputStream("./src/main/resources/testscript.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		String data = wb.getSheet(sheet).getRow(row).getCell(cell).getStringCellValue();
 		return data;
 	}
 	public void writeDataIntoExcel(String sheet,int row,int cell,String value) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./data/testscript.xlsx");
+		FileInputStream fis=new FileInputStream("./src/main/resources/testscript.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		wb.getSheet(sheet).getRow(row).getCell(cell).setCellValue(value);
-		FileOutputStream fos=new FileOutputStream("./data/testscript.xlsx");
+		FileOutputStream fos=new FileOutputStream("./src/main/resources/testscript.xlsx");
 		wb.write(fos);
 		wb.close();
 	}

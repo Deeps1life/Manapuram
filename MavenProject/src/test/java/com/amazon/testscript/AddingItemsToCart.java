@@ -10,6 +10,7 @@ import com.amazon.generic.Baseclass;
 public class AddingItemsToCart extends Baseclass {
 	@Test
 	public void addItems(){	
+		System.out.println(driver.getTitle());
 System.out.println("Done");
 }
 	
